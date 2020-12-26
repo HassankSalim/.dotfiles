@@ -1,13 +1,15 @@
 # Setup fzf
 # ---------
-if [[ ! "$PATH" == */home/ndakota/.fzf/bin* ]]; then
-  export PATH="${PATH:+${PATH}:}/home/ndakota/.fzf/bin"
-fi
+# this is not needed if installed by apt
+# abs home was replaced with ~ didn't it , should work
+# if [[ ! "$PATH" == */home/ndakota/.fzf/bin* ]]; then
+#   export PATH="${PATH:+${PATH}:}~/.fzf/bin"
+# fi
 
 # Auto-completion
 # ---------------
-[[ $- == *i* ]] && source "/home/ndakota/.fzf/shell/completion.zsh" 2> /dev/null
+[[ $- == *i* ]] && source "~/.fzf/shell/completion.zsh" 2> /dev/null
 
 # Key bindings
 # ------------
-source "/home/ndakota/.fzf/shell/key-bindings.zsh"
+source "~/.fzf/shell/key-bindings.zsh"
