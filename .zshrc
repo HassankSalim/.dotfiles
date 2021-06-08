@@ -186,3 +186,17 @@ export PATH=${M2_HOME}/bin:${PATH}
 alias gc="git checkout "
 alias gap="git add -p "
 alias ga="git add "
+
+
+# Django specific route finder
+# alias findroute='find . -name urls.py -exec cat {} + | grep' older one
+
+function findroute() {
+        p='.'
+        if [ ! -z "$2" ]
+        then
+          p=$2
+        fi
+
+        find $p -name urls.py -exec cat {} + | grep $1
+}
